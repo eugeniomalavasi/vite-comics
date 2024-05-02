@@ -23,7 +23,29 @@ export default {
                     title: "DC",
                     links: ["Shop DC", "Shop DC Collectibles"],
                 },
-            ]
+            ],
+            icons: [
+                {
+                    name: "footer-facebook",
+                },
+                {
+                    name: "footer-periscope",
+                },
+                {
+                    name: "footer-pinterest",
+                },
+                {
+                    name: "footer-twitter",
+                },
+                {
+                    name: "footer-youtube",
+                },
+            ],
+        }
+    },
+    methods: {
+        getImageUrl(imageName) {
+            return new URL(`../assets/img/socia/${imageName}.png`, import.meta.url).href;
         }
     },
 }
@@ -53,6 +75,7 @@ export default {
                 <a href="" class="sign">SIGN UP NOW!</a>
                 <div>
                     <a href="" class="follow">FOLLOW US</a>
+                    <img v-for="img in icons" :src="getImageUrl(img)" alt="">
                 </div>
             </div>
         </div>
@@ -105,7 +128,7 @@ export default {
     }
 
     .logo {
-        max-height: 300px;
+        max-height: 295px;
     }
 
     .btm_foot_cont {
@@ -120,7 +143,7 @@ export default {
             .sign {
                 color: white;
                 text-decoration: none;
-                border: 1px solid $active-color;
+                border: 3px solid $active-color;
                 padding: 1rem;
                 border-radius: 5px;
                 font-weight: 700;

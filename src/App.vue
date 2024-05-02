@@ -27,8 +27,6 @@ export default {
   <section>
     <!-- top footer section -->
     <FooterApp />
-    <!-- bottom footer section -->
-    <SocialFooterApp />
   </section>
 
 

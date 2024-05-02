@@ -5,7 +5,7 @@ export default {
             menuList: [
                 {
                     text: "CHARACTER",
-                    active: false
+                    active: true
                 },
                 {
                     text: "COMICS",
@@ -43,7 +43,8 @@ export default {
                     text: "SHOP",
                     active: false
                 },
-            ]
+            ],
+            activeIndex: 0,
         }
     },
 }
@@ -55,7 +56,8 @@ export default {
         <img src="../assets/img/dc-logo.png" alt="dc logo">
         <!-- MENU LIST -->
         <ul>
-            <li v-for="item in menuList"><a href="">{{ item.text }}</a></li>
+            <li v-for="(item, index) in menuList" :class="{ 'active': index === activeIndex }"
+                @click="item.active = !item.active; activeIndex = index"><a href="">{{ item.text }}</a></li>
         </ul>
     </div>
 </template>
@@ -67,7 +69,7 @@ export default {
 
 .header {
     @include flex (row, center, space-between);
-    padding: 2rem 0;
+    padding: 1rem 0;
     width: 80%;
     margin: 0 auto;
 
@@ -75,6 +77,11 @@ export default {
         @include flex (row, center, center);
         list-style-type: none;
         gap: 1rem;
+
+
+        .active {
+            border-bottom: 2px solid $active-color;
+        }
 
         a {
             text-decoration: none;
