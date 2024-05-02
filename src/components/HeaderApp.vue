@@ -50,14 +50,14 @@ export default {
 </script>
 
 <template>
-        <div class="header">
-            <!-- LOGO -->
-            <img src="../assets/img/dc-logo.png" alt="dc logo">
-            <!-- MENU LIST -->
-            <ul>
-                <li v-for="item in menuList"><a href="">{{ item.text }}</a></li>
-            </ul>
-        </div>
+    <div class="header">
+        <!-- LOGO -->
+        <img src="../assets/img/dc-logo.png" alt="dc logo">
+        <!-- MENU LIST -->
+        <ul>
+            <li v-for="item in menuList"><a href="">{{ item.text }}</a></li>
+        </ul>
+    </div>
 </template>
 
 <style scoped lang="scss">
@@ -68,6 +68,9 @@ export default {
 .header {
     @include flex (row, center, space-between);
     padding: 2rem 0;
+    width: 80%;
+    margin: 0 auto;
+
     ul {
         @include flex (row, center, center);
         list-style-type: none;
@@ -77,6 +80,7 @@ export default {
             text-decoration: none;
             color: $font-color;
             font-weight: 800;
+
             &:hover {
                 color: $active-color;
             }

@@ -17,16 +17,20 @@ export default {
   <section>
     <HeaderApp />
   </section>
-  
-<!-- MAIN SECTION -->
+
+  <!-- MAIN SECTION -->
   <section>
     <MainApp />
   </section>
-  
-<!-- FOOTER SECTION -->
+
+  <!-- FOOTER SECTION -->
   <section>
-    <footerApp />
+    <!-- top footer section -->
+    <FooterApp />
+    <!-- bottom footer section -->
+    <SocialFooterApp />
   </section>
+
 
 
 </template>
