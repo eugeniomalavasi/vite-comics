@@ -17,10 +17,12 @@ export default {
   <section>
     <HeaderApp />
   </section>
+  
 <!-- MAIN SECTION -->
   <section>
     <MainApp />
   </section>
+  
 <!-- FOOTER SECTION -->
   <section>
     <footerApp />
