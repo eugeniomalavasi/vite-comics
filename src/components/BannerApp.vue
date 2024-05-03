@@ -5,12 +5,12 @@ export default {
 </script>
 
 <template>
-    <div class="container">
+    <div class="banner_container">
     </div>
 </template>
 
 <style scope lang="scss">
-.container {
+.banner_container {
     height: 300px;
     width: 100%;
     background-image: url('../assets/img/jumbotron.jpg');

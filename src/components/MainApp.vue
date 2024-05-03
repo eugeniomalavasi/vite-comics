@@ -90,6 +90,7 @@ export default {
 
 <template>
     <div class="main">
+        <h4>CURRENT SERIES</h4>
         <div class="row">
             <div class="col" v-for="CurCard in cardArray">
                 <CardApp :thumb="CurCard.thumb" :series="CurCard.series" />
@@ -108,7 +109,15 @@ export default {
 .main {
     background-color: $main-bck-color;
     @include flex (column, center, center);
-
+    position: relative;
+    h4 {
+        color: white;
+        background-color: $active-color;
+        padding: 10px 30px;
+        position: absolute;
+        top: -25px;
+        left: 150px;
+    }
     button {
         background-color: $active-color;
         padding: 10px 25px;
