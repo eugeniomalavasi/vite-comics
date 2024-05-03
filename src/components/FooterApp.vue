@@ -149,7 +149,6 @@ export default {
             .social-icon {
                 padding: 5px;
             }
-            
             .sign {
                 color: white;
                 text-decoration: none;

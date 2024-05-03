@@ -1,15 +1,15 @@
 <script>
 import HeaderApp from './components/HeaderApp.vue';
 import MainApp from './components/MainApp.vue';
-import FooterApp from './components/FooterApp.vue';
 import IconList from './components/IconList.vue';
+import FooterApp from './components/FooterApp.vue';
 
 export default {
   components: {
     HeaderApp,
     MainApp,
     FooterApp,
-    IconList
+    IconList,
   }
 }
 </script>
