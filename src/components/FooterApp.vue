@@ -9,43 +9,39 @@ export default {
                 },
                 {
                     title: "DC",
-                    links: ["Characters", "Comics", "Movies", "TV", "Games", "Videos", "News"]
+                    links: ["Terms of Use", "Privacy Policy (new)", "Ad Choices", "Advertising", "Jobs", "Subscriptions", "Talente Workshops", "CPSC Certificates", "Ratings", "Shop Help", "Contact Us"]
                 },
                 {
                     title: "SITES",
-                    links: ["Characters", "Comics", "Movies", "TV", "Games", "Videos", "News"]
+                    links: ["DC", "MAD Magazine", "DC kids", "DC Universe", "DC Power Visa"],
                 },
                 {
                     title: "SHOP",
-                    links: ["Shop DC", "Shop DC Collectibles"],
-                },
-                {
-                    title: "DC",
-                    links: ["Shop DC", "Shop DC Collectibles"],
+                    links: ["Shop DC", "Shop DC Collectibles"]
                 },
             ],
             icons: [
                 {
-                    name: "footer-facebook",
+                    name: "footer-facebook.png",
                 },
                 {
-                    name: "footer-periscope",
+                    name: "footer-periscope.png",
                 },
                 {
-                    name: "footer-pinterest",
+                    name: "footer-pinterest.png",
                 },
                 {
-                    name: "footer-twitter",
+                    name: "footer-twitter.png",
                 },
                 {
-                    name: "footer-youtube",
+                    name: "footer-youtube.png",
                 },
             ],
         }
     },
     methods: {
         getImageUrl(imageName) {
-            return new URL(`../assets/img/socia/${imageName}.png`, import.meta.url).href;
+            return new URL(`../assets/img/${imageName}`, import.meta.url).href;
         }
     },
 }
@@ -64,8 +60,7 @@ export default {
                     </ul>
                 </li>
             </ul>
-            <div>
-                <img src="../assets/img/dc-logo-bg.png" alt="dc logo transparent" class="logo">
+            <div class="logo_container">
             </div>
         </div>
 
@@ -75,7 +70,11 @@ export default {
                 <a href="" class="sign">SIGN UP NOW!</a>
                 <div>
                     <a href="" class="follow">FOLLOW US</a>
-                    <img v-for="img in icons" :src="getImageUrl(img)" alt="">
+                    <ul>
+                        <li v-for="img in icons">
+                            <img :src="getImageUrl(img.name)" alt="social icon" class="social-icon">
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -93,16 +92,23 @@ export default {
     width: 80%;
     margin: 0 auto;
 
+    .logo_container {
+        height: 300px;
+        width: 60%;
+        background-image: url(../assets/img/dc-logo-bg.png);
+        background-size: cover;
+        background-position: center;
+    }
 }
 
 .footer {
     background-image: url(../assets/img/footer-bg.jpg);
-    height: 300px;
 
     .footer_list {
-        @include flex(row, center, center);
+        @include flex(row, flex-start, flex-start);
         list-style-type: none;
-        gap: 1rem;
+        gap: 1.2rem;
+        flex-wrap: wrap;
 
         .foot_title {
             font-size: 1rem;
@@ -127,10 +133,6 @@ export default {
         }
     }
 
-    .logo {
-        max-height: 295px;
-    }
-
     .btm_foot_cont {
         background-color: #303030;
 
@@ -140,6 +142,14 @@ export default {
             @include flex (row, center, space-between);
             height: 80px;
 
+            ul {
+                list-style-type: none;
+                @include flex(row, center, center) 
+            }
+            .social-icon {
+                padding: 5px;
+            }
+            
             .sign {
                 color: white;
                 text-decoration: none;

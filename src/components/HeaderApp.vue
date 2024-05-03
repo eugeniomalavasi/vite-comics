@@ -69,7 +69,6 @@ export default {
 
 .header {
     @include flex (row, center, space-between);
-    padding: 1rem 0;
     width: 80%;
     margin: 0 auto;
 
@@ -77,7 +76,7 @@ export default {
         @include flex (row, center, center);
         list-style-type: none;
         gap: 1rem;
-
+        line-height: 150px;
 
         .active {
             border-bottom: 2px solid $active-color;

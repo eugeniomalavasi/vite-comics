@@ -2,12 +2,14 @@
 import HeaderApp from './components/HeaderApp.vue';
 import MainApp from './components/MainApp.vue';
 import FooterApp from './components/FooterApp.vue';
+import IconList from './components/IconList.vue';
 
 export default {
   components: {
     HeaderApp,
     MainApp,
-    FooterApp
+    FooterApp,
+    IconList
   }
 }
 </script>
@@ -23,9 +25,11 @@ export default {
     <MainApp />
   </section>
 
+  <!-- ICON LIST SECTION -->
+  <IconList />
+  
   <!-- FOOTER SECTION -->
   <section>
-    <!-- top footer section -->
     <FooterApp />
   </section>
 
