@@ -109,9 +109,9 @@ export default {
     padding: 5rem 2rem;
     @include flex (row, center, center);
     flex-wrap: wrap;
-
+    gap: 1rem;
     .col {
-        width: 30%;
+        width: 15%;
     }
 }
 </style>
