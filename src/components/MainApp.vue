@@ -95,6 +95,7 @@ export default {
                 <CardApp :thumb="CurCard.thumb" :series="CurCard.series" />
             </div>
         </div>
+        <button>LOAD MORE</button>
     </div>
 </template>
 
@@ -104,14 +105,29 @@ export default {
 @use "../style/partials/_mixins" as *;
 
 // MAIN STYLE
-.row {
+.main {
     background-color: $main-bck-color;
-    padding: 5rem 2rem;
-    @include flex (row, center, center);
-    flex-wrap: wrap;
-    gap: 1rem;
-    .col {
-        width: 15%;
+    @include flex (column, center, center);
+
+    button {
+        background-color: $active-color;
+        padding: 10px 25px;
+        color: white;
+        border: none;
+        margin-bottom: 25px;
+        font-size: 0.8rem;
+        font-family: "Poller One", serif;
+        cursor: pointer;
+    }
+    .row {
+        padding: 5rem 2rem;
+        @include flex (row, center, center);
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        .col {
+            width: 15%;
+        }
     }
 }
 </style>

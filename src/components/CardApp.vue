@@ -34,6 +34,7 @@ export default {
         font-weight: 500;
         margin-top: 10px;
         font-size: 0.8rem;
+        font-family: "Poller One", serif;
     }
 }
 </style>

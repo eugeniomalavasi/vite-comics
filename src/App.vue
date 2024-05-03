@@ -1,5 +1,6 @@
 <script>
 import HeaderApp from './components/HeaderApp.vue';
+import BannerApp from './components/BannerApp.vue';
 import MainApp from './components/MainApp.vue';
 import IconList from './components/IconList.vue';
 import FooterApp from './components/FooterApp.vue';
@@ -10,6 +11,7 @@ export default {
     MainApp,
     FooterApp,
     IconList,
+    BannerApp
   }
 }
 </script>
@@ -18,6 +20,11 @@ export default {
   <!-- HEADER SECTION -->
   <section>
     <HeaderApp />
+  </section>
+
+    <!-- MAIN SECTION -->
+    <section>
+    <BannerApp />
   </section>
 
   <!-- MAIN SECTION -->
