@@ -17,15 +17,31 @@ export default {
 </template>
 
 <style scoped lang="scss">
+@use "../style/partials/variables" as *;
 @use "../style/partials/_mixins" as *;
 
 .card {
     @include flex (column, center, center);
 
+    &:hover p {
+        color: $active-color;
+    }
+
+    &:hover img {
+        filter: grayscale(100%);
+        width: 500px;
+        height: 110%;
+        width: 180px;
+        height: 180px;
+    }
+
     img {
         max-width: 100%;
-        aspect-ratio: 1;
+        // aspect-ratio: 1;
+        width: 170px;
+        height: 170px;
         object-fit: cover;
+
     }
 
     p {

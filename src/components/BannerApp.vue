@@ -15,7 +15,8 @@ export default {
     width: 100%;
     background-image: url('../assets/img/jumbotron.jpg');
     background-size: cover;
-    animation: banner_movement 70s infinite;
+    background-position: top;
+    animation: banner_movement 80s infinite;
 }
 
 @keyframes banner_movement {
