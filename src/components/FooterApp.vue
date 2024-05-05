@@ -103,6 +103,17 @@ export default {
 
 .footer {
     background-image: url(../assets/img/footer-bg.jpg);
+    animation: footer_mov 20s infinite;
+    background-position: right;
+    
+
+    @keyframes footer_mov {
+        50% {
+            background-position: left;
+        } 100% {
+            background-position: right
+        }
+    }
 
     .footer_list {
         @include flex(row, flex-start, flex-start);
@@ -144,11 +155,13 @@ export default {
 
             ul {
                 list-style-type: none;
-                @include flex(row, center, center) 
+                @include flex(row, center, center)
             }
+
             .social-icon {
                 padding: 5px;
             }
+
             .sign {
                 color: white;
                 text-decoration: none;

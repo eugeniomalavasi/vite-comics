@@ -15,5 +15,13 @@ export default {
     width: 100%;
     background-image: url('../assets/img/jumbotron.jpg');
     background-size: cover;
+    animation: banner_movement 70s infinite;
 }
-</style>
+
+@keyframes banner_movement {
+    50% {
+        background-position: center;
+    }
+
+
+    }</style>
